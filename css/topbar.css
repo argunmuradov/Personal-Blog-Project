@@ -1,0 +1,66 @@
+
+.topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, #02B3E4, #b3cde6);
+    grid-area: top;
+}
+
+nav ul {
+    margin: 0;
+    padding: 1em;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+#blogname {
+    font-family: 'MuseoModerno', serif;
+    float: left;
+    margin-left: 1em;
+    font-size: 1.0em;
+    text-decoration: none;
+    color: #04283a;
+    padding: 0px;
+}
+
+@media(min-width:700px) {
+#blogname {
+     font-family: 'MuseoModerno', serif;
+    float: left;
+    margin-left: 0.4em;
+    padding: 0px;
+    font-size: 1.4em;
+}
+}
+
+nav a {
+    font-family: 'Source Code Pro', monospace;
+    padding: 0.2em;
+    color: #800080;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #444;
+    border-radius: 2px;
+    background-color: #ADD8E6;
+    font-size: 0.7em;
+}
+
+@media(min-width: 600px) {
+nav a {
+    font-family: 'Source Code Pro', monospace;
+    padding: 0.5em;
+    color: #800080;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid #444;
+    border-radius: 10px;
+    background-color: #ADD8E6;
+    font-size: 1em;
+}
+}

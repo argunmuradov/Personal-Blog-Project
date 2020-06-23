@@ -1,0 +1,171 @@
+
+@import "blogpost.css";
+@import "author.css";
+@import "topbar.css";
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr 1.2em;
+    grid-template-areas: 
+    "top"
+    "md"
+    "ft";
+}
+
+.containerwithpost {
+	display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1.2em;
+    grid-template-areas: 
+	"top"
+	"info"
+    "md"
+    "ft";
+
+}
+
+
+.footer {
+    border-bottom: 1px solid #444;
+    padding: 0.2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#footertext {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.7em;
+}
+
+.postlist {
+    background-color: #b3cde6;
+    grid-area: md;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: minmax(20em,auto);
+    grid-template-areas: 
+    "first second";
+}
+
+
+@media(min-width:1000px) {
+.postlist { 
+    background-color: #b3cde6;
+    grid-area: md;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 33% 33% 33%;
+    grid-auto-rows: minmax(30em,auto);
+    grid-template-areas: 
+    "first second third";
+}
+}
+
+.postcardholder {
+    grid-area: first;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.postcard {
+    border: 1px solid #444;
+    border-radius: 20px;
+    background-color: #dae9f7 ;
+    display: grid;
+    height: 90%;
+    width: 90%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 45% 9% 30% 16%;
+    grid-template-areas:
+    "pic"
+    "title"
+    "about"
+    "button";
+}
+
+.picture {
+    border: 1px solid #444;
+    border-radius: 10px;
+    margin: 1em;
+    overflow: hidden;
+    grid-area: pic;
+    background-image:  url('../img/speakerpic.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.title {
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#posttitle { 
+   font-family: 'MuseoModerno', serif;
+   font-size: 1em;
+   text-align: center;
+}
+
+@media(min-width: 700px) {
+#posttitle { 
+   font-family: 'MuseoModerno', serif;
+   font-size: 0.8em;
+}
+}
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#postabout {
+    z-index: -2;
+    text-align: center;
+    font-size: 0.8em;
+    color: #444;
+}
+
+@media(min-width: 700px) {
+#postabout {
+    z-index: 0;
+    text-align: center;
+    font-size: 0.8em;
+    color: #444;
+}
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+input {
+    background-color: #5e9ed6; 
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+

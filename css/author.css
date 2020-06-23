@@ -1,0 +1,47 @@
+.authorinfo {
+    background-color: azure;
+    border: 1px solid #444;
+    display: grid;
+	grid-template-columns:  1fr 150px;
+	grid-template-rows: 1fr;
+	min-height: 150px;
+	grid-template-areas: "info pic"
+}
+
+.authorpicholder {
+    grid-area: pic;
+    padding: 0px;
+    grid-area: pic;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.authortitle {
+    margin: 10px;
+    font-family: 'Odibee Sans', serif;
+    font-size: 1em;
+}
+
+.authorinfotmp {
+    margin: 10px;
+    text-align: center;
+    font-size: 0.7em;
+}
+
+#authorpic {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#argcaption {
+    text-align: center;
+    font-size: 5px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-item: center;
+}
